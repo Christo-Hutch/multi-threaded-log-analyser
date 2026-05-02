@@ -1,7 +1,9 @@
-package main.java.com.loganlyser.model;
+package main.java.com.loganlyser.buffer;
 
 import java.util.LinkedList;
 import java.util.Queue;
+
+import main.java.com.loganlyser.model.IdentifiableLog;
 
 /**
  * Custom queue class for all IdentifiableLog objects.
