@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 /**
  * A common contract for all log types in the system.
  */
-public interface IdentifiableLog {
+public interface IdentifiableLog extends Comparable<IdentifiableLog> {
     LocalDateTime timestamp();
     LogLevel level();
     String message();
@@ -16,5 +16,10 @@ public interface IdentifiableLog {
 
     default String getFormattedEntry() {
         return String.format("[%s] %s: %s (Meta: %s)", timestamp(), level(), message(), getMetaData());
+    }
+
+    @Override
+    default int compareTo(IdentifiableLog other) {
+        return Integer.compare(this.level().getPriority(), other.level().getPriority());
     }
 }
