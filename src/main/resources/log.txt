@@ -1,0 +1,6 @@
+NET,L-101,2026-05-01T14:20:00,INFO,Connection established,192.168.1.15
+SYS,L-102,2026-05-01T14:21:05,WARN,High CPU Usage,N/A
+NET,L-103,2026-05-01T14:22:10,ERROR,Packet loss detected,10.0.0.5
+SYS,L-104,2026-05-01T14:23:45,INFO,System update checked,N/A
+NET,L-105,invalid_date,ERROR,Corrupt timestamp test,127.0.0.1
+UNK,L-106,2026-05-01T14:25:00,DEBUG,Testing unknown type,N/A
