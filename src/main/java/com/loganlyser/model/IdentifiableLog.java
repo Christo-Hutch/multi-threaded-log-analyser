@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
  * A common contract for all log types in the system.
  */
 public interface IdentifiableLog extends Comparable<IdentifiableLog> {
+    String id();
     LocalDateTime timestamp();
     LogLevel level();
     String message();
