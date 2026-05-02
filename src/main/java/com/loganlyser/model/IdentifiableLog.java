@@ -16,7 +16,7 @@ public interface IdentifiableLog extends Comparable<IdentifiableLog> {
     }
 
     default String getFormattedEntry() {
-        return String.format("[%s] %s: %s (Meta: %s)", timestamp(), level(), message(), getMetaData());
+        return String.format("(%s)[%s] %s: %s (Meta: %s)", id(), timestamp(), level(), message(), getMetaData());
     }
 
     @Override
