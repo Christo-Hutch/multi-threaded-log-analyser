@@ -11,10 +11,10 @@ import main.java.com.loganlyser.exception.UnrecongizedLogTypeException;
 public class LogFileReader {
     public LogBuffer<IdentifiableLog> readLogsFromFile(String filePath, LogBuffer<IdentifiableLog> buffer) throws IOException, UnrecongizedLogTypeException {
         Path path = Paths.get(filePath);
+        int lineNumberCounter = 0;
 
         try (BufferedReader reader = Files.newBufferedReader(path)) {
             String line;
-            int lineNumberCounter = 0;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 IdentifiableLog log = switch (parts[0]) {
@@ -27,8 +27,12 @@ public class LogFileReader {
 
                 buffer.addLog(log);
 
-                lineNumberCounter += 1;
+                lineNumberCounter++;
             }
+        } catch (UnrecongizedLogTypeException e){
+            System.out.println("Skipping unknown entry: " + e.getMessage());
+        } catch (Exception e){
+            System.out.println("Unexpected error at line " + lineNumberCounter + ": " + e.getMessage());
         }
         return buffer;
     }
