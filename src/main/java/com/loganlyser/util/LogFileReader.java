@@ -20,9 +20,8 @@ public class LogFileReader {
      * @param buffer
      * @return A LogBuffer containing all valid logs from log file.
      * @throws IOException
-     * @throws UnrecongizedLogTypeException
      */
-    public LogBuffer<IdentifiableLog> readLogsFromFile(String filePath, LogBuffer<IdentifiableLog> buffer) throws IOException, UnrecongizedLogTypeException {
+    public LogBuffer<IdentifiableLog> readLogsFromFile(String filePath, LogBuffer<IdentifiableLog> buffer) throws IOException {
         Path path = Paths.get(filePath);
         int lineNumberCounter = 0;
 
