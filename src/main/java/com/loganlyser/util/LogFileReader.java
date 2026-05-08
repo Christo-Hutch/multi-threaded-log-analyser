@@ -8,7 +8,20 @@ import main.java.com.loganlyser.model.*;
 import main.java.com.loganlyser.buffer.LogBuffer;
 import main.java.com.loganlyser.exception.UnrecongizedLogTypeException;
 
+/**
+ * A class for reading from log files and abstracting the data.
+ */
 public class LogFileReader {
+
+    /**
+     * Scans and records all valid logs within parsed file.
+     * 
+     * @param filePath
+     * @param buffer
+     * @return A LogBuffer containing all valid logs from log file.
+     * @throws IOException
+     * @throws UnrecongizedLogTypeException
+     */
     public LogBuffer<IdentifiableLog> readLogsFromFile(String filePath, LogBuffer<IdentifiableLog> buffer) throws IOException, UnrecongizedLogTypeException {
         Path path = Paths.get(filePath);
         int lineNumberCounter = 0;
