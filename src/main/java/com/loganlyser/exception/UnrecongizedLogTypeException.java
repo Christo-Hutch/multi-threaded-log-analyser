@@ -3,12 +3,12 @@ package main.java.com.loganlyser.exception;
 /**
  * Thrown when LogFileReader encounters a line with an unacceptable log type.
  */
-public class UnrecongizedLogTypeException extends Exception {
+public class UnrecongizedLogTypeException extends LogAnalysisException {
     private final String rawData;
     private final int lineNumber;
 
     public UnrecongizedLogTypeException(String message, int lineNumber, String rawData, Throwable cause) {
-        super(message, cause);
+        super(String.format("%s at line %d", message, lineNumber));
         this.lineNumber = lineNumber;
         this.rawData = rawData;
     }
