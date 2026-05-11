@@ -41,6 +41,9 @@ public class LogFileReader {
 
                 lineNumberCounter++;
             }
+
+            buffer.addLog(new EndOfStreamLog());
+
         } catch (UnrecongizedLogTypeException e){
             System.out.println("Skipping unknown entry: " + e.getMessage());
         } catch (Exception e){
