@@ -11,7 +11,25 @@ import main.java.com.loganlyser.exception.UnrecongizedLogTypeException;
 /**
  * A class for reading from log files and abstracting the data.
  */
-public class LogFileReader {
+public class LogFileReader implements Runnable{
+    private final String filePath;
+    private final LogBuffer<IdentifiableLog> buffer;
+
+    public LogFileReader(String filePath, LogBuffer<IdentifiableLog> buffer) {
+        this.filePath = filePath;
+        this.buffer = buffer;
+    }
+
+    @Override
+    public void run() {
+        try {
+            readLogsFromFile();
+        } catch (IOException e) {
+            System.err.println("Critical I/O Error: " + e.getMessage());
+        } finally {
+            buffer.addLog(new EndOfStreamLog());
+        }
+    }
 
     /**
      * Scans and records all valid logs within parsed file.
@@ -21,7 +39,7 @@ public class LogFileReader {
      * @return A LogBuffer containing all valid logs from log file.
      * @throws IOException
      */
-    public LogBuffer<IdentifiableLog> readLogsFromFile(String filePath, LogBuffer<IdentifiableLog> buffer) throws IOException {
+    public LogBuffer<IdentifiableLog> readLogsFromFile() throws IOException {
         Path path = Paths.get(filePath);
         int lineNumberCounter = 0;
 
