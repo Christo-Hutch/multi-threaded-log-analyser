@@ -4,3 +4,97 @@ NET,L-103,2026-05-01T14:22:10,ERROR,Packet loss detected,10.0.0.5
 SYS,L-104,2026-05-01T14:23:45,INFO,System update checked,N/A
 NET,L-105,2026-05-01T14:23:48,ERROR,Corrupt timestamp test,127.0.0.1
 UNK,L-106,2026-05-01T14:25:00,DEBUG,Testing unknown type,N/A
+SEC,L-107,2026-05-01T14:26:12,WARN,Brute force attempt detected,172.16.0.45
+DB,L-108,2026-05-01T14:27:03,INFO,Query execution successful,Users_Table
+APP,L-109,2026-05-01T14:28:44,ERROR,Null pointer exception at line 42,MainController
+AUTH,L-110,2026-05-01T14:29:15,INFO,User 'admin' logged in,192.168.1.50
+SYS,L-111,2026-05-01T14:30:00,INFO,Disk cleanup started,N/A
+NET,L-112,2026-05-01T14:31:05,DEBUG,Handshake complete,10.0.0.8
+DB,L-113,2026-05-01T14:32:18,WARN,Slow query detected,Orders_History
+SEC,L-114,2026-05-01T14:33:50,CRITICAL,Firewall breach suspected,External_IP_88
+APP,L-115,2026-05-01T14:34:22,INFO,Cache cleared,N/A
+SYS,L-116,2026-05-01T14:35:10,WARN,Memory pressure high,85% utilization
+NET,L-117,2026-05-01T14:36:45,ERROR,DNS resolution failed,google.com
+AUTH,L-118,2026-05-01T14:37:30,WARN,Invalid password attempt,user_jsmith
+DB,L-119,2026-05-01T14:38:12,ERROR,Database connection timeout,Cluster_A
+SYS,L-120,2026-05-01T14:39:55,INFO,Kernel update available,v5.15.2
+NET,L-121,2026-05-01T14:40:02,INFO,VPN tunnel established,Tunnel_01
+APP,L-122,2026-05-01T14:41:15,DEBUG,Garbage collection finished,250ms
+SEC,L-123,2026-05-01T14:42:33,INFO,SSL Certificate verified,Let's Encrypt
+AUTH,L-124,2026-05-01T14:43:09,INFO,Session expired,session_id_992
+SYS,L-125,2026-05-01T14:44:50,ERROR,Fan failure detected,Chassis_Fan_2
+NET,L-126,2026-05-01T14:45:12,WARN,Latency spike,250ms
+DB,L-127,2026-05-01T14:46:33,INFO,Indexing completed,Products_DB
+APP,L-128,2026-05-01T14:47:45,INFO,New user registered,ID_5521
+SEC,L-129,2026-05-01T14:48:20,WARN,Unauthorized file access, /etc/shadow
+SYS,L-130,2026-05-01T14:49:11,INFO,NTP sync successful,pool.ntp.org
+NET,L-131,2026-05-01T14:50:00,INFO,BGP route updated,AS65001
+DB,L-132,2026-05-01T14:51:25,ERROR,Deadlock detected,Process_ID_881
+APP,L-133,2026-05-01T14:52:40,DEBUG,Environment variables loaded,Production_Env
+AUTH,L-134,2026-05-01T14:53:55,WARN,MFA token rejected,user_rdoe
+SYS,L-135,2026-05-01T14:54:12,INFO,System backup started,Volume_E
+SEC,L-136,2026-05-01T14:55:01,CRITICAL,SQL Injection attempt blocked,Web_Front_01
+NET,L-137,2026-05-01T14:56:30,INFO,Interface eth0 up,N/A
+DB,L-138,2026-05-01T14:57:45,INFO,Transaction committed,TXID_10029
+APP,L-139,2026-05-01T14:58:12,ERROR,Out of memory error,Heap_Space
+SYS,L-140,2026-05-01T14:59:59,WARN,Temperature threshold exceeded,GPU_0
+NET,L-141,2026-05-01T15:00:05,DEBUG,Keep-alive sent,192.168.1.1
+SEC,L-142,2026-05-01T15:01:15,INFO,Security policy reloaded,Standard_v2
+AUTH,L-143,2026-05-01T15:02:40,INFO,User logout,user_admin
+DB,L-144,2026-05-01T15:03:55,WARN,Maximum connections reaching limit,98/100
+APP,L-145,2026-05-01T15:04:12,INFO,Email notification sent,Queue_Default
+SYS,L-146,2026-05-01T15:05:33,INFO,System backup completed,N/A
+NET,L-147,2026-05-01T15:06:50,ERROR,DHCP lease renewal failed,eth0
+SEC,L-148,2026-05-01T15:07:22,WARN,Suspicious port scan,Remote_Host_X
+DB,L-149,2026-05-01T15:08:45,DEBUG,Schema migration pending,v2.1
+APP,L-150,2026-05-01T15:09:12,INFO,Application heartbeat,Status_OK
+SYS,L-151,2026-05-01T15:10:00,INFO,Scheduled task: Cleanup_Tmp,Success
+NET,L-152,2026-05-01T15:11:05,WARN,WLAN interference high,Channel_11
+DB,L-153,2026-05-01T15:12:33,ERROR,Disk full for DB logs,Partition_D
+SEC,L-154,2026-05-01T15:13:50,INFO,Audit log rotated,N/A
+AUTH,L-155,2026-05-01T15:14:15,WARN,Account locked,user_blocked_01
+APP,L-156,2026-05-01T15:15:44,DEBUG,Config file reloaded,config.yaml
+SYS,L-157,2026-05-01T15:16:10,INFO,Hardware inventory scan,Complete
+NET,L-158,2026-05-01T15:17:33,ERROR,Router unreachable,192.168.1.254
+DB,L-159,2026-05-01T15:18:55,INFO,Read replica synced,Node_3
+SEC,L-160,2026-05-01T15:19:12,CRITICAL,Rootkit signature detected,System_Scanner
+AUTH,L-161,2026-05-01T15:20:00,INFO,Password changed successfully,user_alice
+APP,L-162,2026-05-01T15:21:05,WARN,API rate limit approaching,Client_99
+SYS,L-163,2026-05-01T15:22:45,DEBUG,CPU Affinity set,Core_4
+NET,L-164,2026-05-01T15:23:18,INFO,Link speed negotiated,1000Mbps
+DB,L-165,2026-05-01T15:24:40,ERROR,Integrity constraint violation,Table_Orders
+SEC,L-166,2026-05-01T15:25:55,WARN,Untrusted USB device connected,Port_3
+APP,L-167,2026-05-01T15:26:12,INFO,Feature flag toggled,Beta_UI_Off
+AUTH,L-168,2026-05-01T15:27:33,DEBUG,Token validation latency,12ms
+SYS,L-169,2026-05-01T15:28:50,INFO,FileSystem check (fsck),Healthy
+NET,L-170,2026-05-01T15:29:12,WARN,Duplicate IP detected,00:1A:2B:3C:4D:5E
+DB,L-171,2026-05-01T15:30:00,INFO,Backup verification,Passed
+SEC,L-172,2026-05-01T15:31:05,INFO,SSH access granted,user_dev
+APP,L-173,2026-05-01T15:32:45,ERROR,Third-party API down,Payment_Gateway
+AUTH,L-174,2026-05-01T15:33:18,WARN,Geographic anomaly login,User_Bob_UK_to_CN
+SYS,L-175,2026-05-01T15:34:55,DEBUG,Interrupt request handled,IRQ_16
+NET,L-176,2026-05-01T15:35:10,INFO,Multicast group joined,224.0.0.1
+DB,L-177,2026-05-01T15:36:33,WARN,Table fragmentation high,Log_Table
+SEC,L-178,2026-05-01T15:37:50,INFO,IDS signatures updated,Version_982
+APP,L-179,2026-05-01T15:38:12,DEBUG,Parsing JSON request,1024_bytes
+AUTH,L-180,2026-05-01T15:39:44,INFO,Recovery email sent,user_admin
+SYS,L-181,2026-05-01T15:40:02,INFO,Uptime 30 days,N/A
+NET,L-182,2026-05-01T15:41:15,ERROR,MTU size mismatch,eth1
+DB,L-183,2026-05-01T15:42:33,INFO,Vacuum analyze completed,Prod_DB
+SEC,L-184,2026-05-01T15:43:09,WARN,XSS payload detected,Contact_Form
+APP,L-185,2026-05-01T15:44:50,INFO,Image resized,upload_882.png
+AUTH,L-186,2026-05-01T15:45:12,ERROR,OAuth provider error,Google_Auth
+SYS,L-187,2026-05-01T15:46:45,WARN,Swap usage high,2GB/4GB
+NET,L-188,2026-05-01T15:47:30,DEBUG,ICMP Echo Request,8.8.8.8
+DB,L-189,2026-05-01T15:48:12,INFO,Point-in-time recovery set,15:45:00
+SEC,L-190,2026-05-01T15:49:55,INFO,Vulnerability scan started,Target_Server_Log
+APP,L-191,2026-05-01T15:50:00,INFO,Worker thread spawned,Thread_ID_12
+AUTH,L-192,2026-05-01T15:51:25,WARN,Multiple concurrent logins,user_sysop
+SYS,L-193,2026-05-01T15:52:40,INFO,Service 'docker' restarted,N/A
+NET,L-194,2026-05-01T15:53:55,ERROR,SSL Handshake failed,Remote_Client_9
+DB,L-195,2026-05-01T15:54:12,DEBUG,Row lock released,Order_9912
+SEC,L-196,2026-05-01T15:55:01,WARN,Data exfiltration warning,DLP_Engine
+APP,L-197,2026-05-01T15:56:30,INFO,PDF report generated,Client_Report_May
+AUTH,L-198,2026-05-01T15:57:45,INFO,API Key created,Key_Test_User
+SYS,L-199,2026-05-01T15:58:12,DEBUG,PCI Express link trained,Gen3x16
+UNK,L-200,2026-05-01T16:00:00,CRITICAL,End of log stream reached,EOF
