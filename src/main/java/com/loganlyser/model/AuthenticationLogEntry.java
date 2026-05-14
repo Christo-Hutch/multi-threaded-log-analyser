@@ -3,7 +3,7 @@ package main.java.com.loganlyser.model;
 import java.time.LocalDateTime;
 
 /**
- * An immutable representation of a single network log event within the system.
+ * An immutable representation of a single authentication log event within the system.
  * 
  * @param id        The unique identifier for the event.
  * @param timestamp The exact date and time the event occured.
@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  * @param ipAddress The ip address of the where the event occured.
  * @see IdentifiableLog The interface for log event records.
  */
-public record NetworkLogEntry(
+public record AuthenticationLogEntry(
         String id,
         LocalDateTime timestamp,
         LogLevel level,
