@@ -21,7 +21,7 @@ public record NetworkLogEntry(
 
     @Override
     public String getFormattedEntry() {
-        return String.format("(%s) -NETWORK- [%s] %s: %s (Meta: %s)", id, timestamp, level, message, ipAddress);
+        return String.format("(%s) -NETWORK- [%s] %s: %s (IP Address: %s)", id, timestamp, level, message, ipAddress);
     }
 
     @Override
