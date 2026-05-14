@@ -52,6 +52,14 @@ public class LogFileReader implements Runnable{
 
                     case "SYS" -> new SystemLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4]);
 
+                    case "APP" -> new ApplicationLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
+
+                    case "AUTH" -> new AuthenticationLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
+
+                    case "DB" -> new DatabaseLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
+
+                    case "SEC" -> new SecurityLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
+
                     default -> throw new UnrecongizedLogTypeException("Unknown Log Type: " + parts[0], lineNumberCounter, line, null);
                 };
 
