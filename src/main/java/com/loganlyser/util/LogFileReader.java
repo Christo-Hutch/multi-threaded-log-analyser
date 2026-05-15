@@ -47,31 +47,34 @@ public class LogFileReader implements Runnable{
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
-                IdentifiableLog log = switch (parts[0]) {
-                    case "NET" -> new NetworkLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
+                try {
+                    IdentifiableLog log = switch (parts[0]) {
+                        case "NET" -> new NetworkLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
 
-                    case "SYS" -> new SystemLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4]);
+                        case "SYS" -> new SystemLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4]);
 
-                    case "APP" -> new ApplicationLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
+                        case "APP" -> new ApplicationLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
 
-                    case "AUTH" -> new AuthenticationLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
+                        case "AUTH" -> new AuthenticationLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
 
-                    case "DB" -> new DatabaseLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
+                        case "DB" -> new DatabaseLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
 
-                    case "SEC" -> new SecurityLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
+                        case "SEC" -> new SecurityLogEntry(parts[1], LocalDateTime.parse(parts[2]), LogLevel.valueOf(parts[3]), parts[4], parts[5]);
 
-                    default -> throw new UnrecongizedLogTypeException("Unknown Log Type: " + parts[0], lineNumberCounter, line, null);
-                };
+                        default -> throw new UnrecongizedLogTypeException("Unknown Log Type: " + parts[0], lineNumberCounter, line, null);
+                    };
 
-                buffer.addLog(log);
+                    buffer.addLog(log);
 
-                lineNumberCounter++;
+                    lineNumberCounter++;
+                    
+                } catch (UnrecongizedLogTypeException e) {
+                    System.out.println("Skipping unknown entry: " + e.getMessage());
+                }
             }
 
             buffer.addLog(new EndOfStreamLog());
 
-        } catch (UnrecongizedLogTypeException e){
-            System.out.println("Skipping unknown entry: " + e.getMessage());
         } catch (Exception e){
             System.out.println("Unexpected error at line " + lineNumberCounter + ": " + e.getMessage());
         }
